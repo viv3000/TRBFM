@@ -16,6 +16,7 @@ class btn:
 
 @bot.message_handler(commands = ['start'])
 def url(message):
+    print(message.from_user)
     markup = types.ReplyKeyboardMarkup();
 
     btns = {
