@@ -28,7 +28,7 @@ def url(message):
     for i in btns: 
         markup.add(types.InlineKeyboardButton(text=i.text))
 
-    bot.send_message(message.from_user.id, "Приветульки малышь!!!", reply_markup = markup);
+    bot.send_message(message.from_user.id, "Приветульки малышь!!!\n /getTimetable - попросить расписание\n /start - начать общение сначала", reply_markup = markup);
 
 
 @bot.message_handler(commands = ['getTimetable'])
@@ -36,8 +36,8 @@ def url(message):
     markup = types.InlineKeyboardMarkup();
 
     btns = []
-    for i in range (7): 
-        day = (datetime.now() - timedelta(days=i-4))
+    for i in range (10): 
+        day = (datetime.now() - timedelta(days=i-6))
         url = f'https://mkeiit.ru/wp-content/uploads/{day.year}/{day.month}/{day.day}.{day.month}.{day.year}.pdf'
         if requests.get(url).status_code == 200:
             dateFormat = (str(day.year)  + "-" + 
