@@ -2,8 +2,9 @@
 ## Ежели ты хочешь запустить это следуй следующей инструкции (да маркдаун я не знаю) 
 ### [(ясное дело скачай питухан и pip)](https://www.python.org/downloads/ "Сам может догадаешься?")
 ``` bash
+git clone github.com/viv3000/TRBFM.git
+cd TRBFM
 source bin/activate  
-pip install pytelegrambotap  
 cd src  
 touch token.txt  
 echo "<твой токен>" >> token.txt  
