@@ -32,7 +32,7 @@ def commands_handler(bot):
         for i in btns: 
             markup.add(types.InlineKeyboardButton(text=i.text))
     
-        bot.send_message(message.from_user.id, "Приветульки малышь!!!\n /getTimetable - попросить расписание\n /start - начать общение сначала \n /getCallTimetable - получить расписание звонков \n /getCallTimetableMonday - получить расписание звонков на понедельник \n /getCallTimetableFriday - получить расписание звонков на пятницу \n /getCallTimetableSaturday - получить расписание звонков на субботу", reply_markup = markup);
+        bot.send_message(message.from_user.id, "Приветульки малышь!!!\n /start - начать общение сначала\n /getTimetable - попросить расписание \n /getCallTimetable - получить расписание звонков \n /getCallTimetableMonday - получить расписание звонков на понедельник \n /getCallTimetableFriday - получить расписание звонков на пятницу \n /getCallTimetableSaturday - получить расписание звонков на субботу", reply_markup = markup);
 
     @bot.message_handler(commands = ['getTimetable'])
     def getTimetableHandler(message):

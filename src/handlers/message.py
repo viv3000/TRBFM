@@ -11,7 +11,7 @@ def message_handler(bot):
                 "в сайт калледжа хочу ссылочку" : "https://mkeiit.ru",
                 "в гитхаб хочу ссылочку"        : "https://github.com/viv3000/TRBFM",
                 "в порнхаб хочу ссылочку"       : "https://pornhub.com/viv3000",
-                "списочек коммандочек"          : "Приветульки малышь!!!\n /getTimetable - попросить расписание\n /start - начать общение сначала \n /getCallTimetable - получить расписание звонков \n /getCallTimetableMonday - получить расписание звонков на понедельник \n /getCallTimetableFriday - получить расписание звонков на пятницу \n /getCallTimetableSaturday - получить расписание звонков на субботу",
+                "списочек коммандочек"          : "Приветульки малышь!!!\n /start - начать общение сначала\n /getTimetable - попросить расписание \n /getCallTimetable - получить расписание звонков \n /getCallTimetableMonday - получить расписание звонков на понедельник \n /getCallTimetableFriday - получить расписание звонков на пятницу \n /getCallTimetableSaturday - получить расписание звонков на субботу",
         }
         
         try:
