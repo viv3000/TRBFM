@@ -8,10 +8,8 @@ def message_handler(bot):
     def getTextMessages(message):
         Log().log(f'{message.from_user.username}: {message.text}');
         messages = {
-                "в сайт калледжа хочу ссылочку" : "https://mkeiit.ru",
-                "в гитхаб хочу ссылочку"        : "https://github.com/viv3000/TRBFM",
-                "в порнхаб хочу ссылочку"       : "https://pornhub.com/viv3000",
-                "списочек коммандочек"          : "Приветульки малышь!!!\n /start - начать общение сначала\n /getTimetable - попросить расписание \n /getCallTimetable - получить расписание звонков \n /getCallTimetableMonday - получить расписание звонков на понедельник \n /getCallTimetableFriday - получить расписание звонков на пятницу \n /getCallTimetableSaturday - получить расписание звонков на субботу",
+                "Контакты"             : "Школка: https://mkeiit.ru\ngithub: https://github.com/viv3000/TRBFM\npornhub - https://pornhub.com/viv3000\ntg: https://t.me/viv_3000\nvk: https://vk.ru/viv3000",
+                "Списочек коммандочек" : "Приветульки малышь!!!\n /start - начать общение сначала\n /getTimetable - попросить расписание \n /getCallTimetable - получить расписание звонков \n /getCallTimetableMonday - получить расписание звонков на понедельник \n /getCallTimetableFriday - получить расписание звонков на пятницу \n /getCallTimetableSaturday - получить расписание звонков на субботу",
         }
         
         try:

@@ -24,10 +24,8 @@ def commands_handler(bot):
         markup = types.ReplyKeyboardMarkup();
     
         btns = {
-            btn("в сайт калледжа хочу ссылочку") : "",
-            btn("в гитхаб хочу ссылочку") : "",
-            btn("в порнхаб хочу ссылочку") : "",
-            btn("списочек коммандочек") : "",
+            btn("Контакты") : "",
+            btn("Списочек коммандочек") : "",
         }
         for i in btns: 
             markup.add(types.InlineKeyboardButton(text=i.text))
