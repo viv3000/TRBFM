@@ -50,4 +50,27 @@ def commands_handler(bot):
         for i in btns: 
             markup.add(types.InlineKeyboardButton(text=i.text))
     
-        bot.send_message(message.from_user.id, "Приветульки малышь!!!\n /getTimetable - попросить расписание\n /start - начать общение сначала", reply_markup = markup);
+        bot.send_message(message.from_user.id, "Приветульки малышь!!!\n /getTimetable - попросить расписание\n /start - начать общение сначала \n /getCallTimetable - получить расписание звонков \n /getCallTimetableMonday - получить расписание звонков на понедельник \n /getCallTimetableFriday - получить расписание звонков на пятницу \n /getCallTimetableSaturday - получить расписание звонков на субботу", reply_markup = markup);
+
+def commands_handler(bot):
+    @bot.message_handler(commands = ['getCallTimetable'])
+    def getCallTimetableHandler(message):
+        Log().log(message.from_user.username + ': \getCallTimetable');
+        bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-основное-.pdf");
+
+def commands_handler(bot):
+    @bot.message_handler(commands = ['getCallTimetableMonday'])
+    def getCallTimetableHandler(message):
+        Log().log(message.from_user.username + ': \getCallTimetable');
+        bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-на-понедельник-.pdf");
+def commands_handler(bot):
+    @bot.message_handler(commands = ['getCallTimetableFriday'])
+    def getCallTimetableHandler(message):
+        Log().log(message.from_user.username + ': \getCallTimetable');
+        bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-на-пятницу-.pdf");
+def commands_handler(bot):
+    @bot.message_handler(commands = ['getCallTimetableSaturday'])
+    def getCallTimetableHandler(message):
+        Log().log(message.from_user.username + ': \getCallTimetable');
+        bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-суббота.pdf");
+
