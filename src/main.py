@@ -16,7 +16,7 @@ message_handler(bot);
 callback_handler(bot);
 
 
-bot.polling(none_stop=True, interval=5)
+bot.polling(none_stop=True, interval=0)
 """
 try:
     bot.polling(none_stop=True, interval=10)

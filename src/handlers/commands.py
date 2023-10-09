@@ -6,6 +6,7 @@ from templates.btn import btn;
 from templates.Timetables import Timetables;
 from templates.Timetables import Timetable;
 from templates.TimetableBtn import TimetableBtn
+from templates.ConverterPdfToJpg import ConverterPdfToJpg
 
 from log import Log;
    
@@ -45,20 +46,32 @@ def commands_handler(bot):
     @bot.message_handler(commands = ['getCallTimetable'])
     def getCallTimetableHandler(message):
         Log().log(': \getCallTimetable', message.from_user);
-        bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-основное-.pdf");
+        jpgs = ConverterPdfToJpg().convert(
+            "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-основное-.pdf")
+        for i in jpgs:
+            bot.send_photo(message.from_user.id, photo=open(i, 'rb'));
     
     @bot.message_handler(commands = ['getCallTimetableMonday'])
     def getCallTimetableMondayHandler(message):
         Log().log(': \getCallTimetableMonday', message.from_user);
-        bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-на-понедельник-.pdf");
+        jpgs = ConverterPdfToJpg().convert(
+            "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-на-понедельник-.pdf")
+        for i in jpgs:
+            bot.send_photo(message.from_user.id, photo=open(i, 'rb'));
     
     @bot.message_handler(commands = ['getCallTimetableFriday'])
     def getCallTimetableFridayHandler(message):
         Log().log(': \getCallTimetableFriday', message.from_user);
-        bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-на-пятницу-.pdf");
+        jpgs = ConverterPdfToJpg().convert(
+            "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-на-пятницу-.pdf")
+        for i in jpgs:
+            bot.send_photo(message.from_user.id, photo=open(i, 'rb'));
     
     @bot.message_handler(commands = ['getCallTimetableSaturday'])
     def getCallTimetableSaturdayHandler(message):
         Log().log(': \getCallTimetableSaturday', message.from_user);
-        bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-суббота.pdf");
+        jpgs = ConverterPdfToJpg().convert(
+            "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-суббота.pdf")
+        for i in jpgs:
+            bot.send_photo(message.from_user.id, photo=open(i, 'rb'));
 

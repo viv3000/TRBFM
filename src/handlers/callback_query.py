@@ -11,6 +11,6 @@ def callback_handler(bot):
     def callback_worker(call):
         Log().log(f'server: call.data:{call.data}', call.from_user)
 
-        bot.send_document(
-                call.from_user.id, 
-                ConverterPdfToJpg().convert(call.data));
+        jpgs = ConverterPdfToJpg().convert(call.data);
+        for i in jpgs:
+            bot.send_photo(call.from_user.id, photo=open(i, 'rb'));
