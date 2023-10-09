@@ -498,3 +498,4 @@ restart server!!!!
 2023-10-09 21:02:06.447953; user: viv_3000; message Списочек коммандочек; error: None
 2023-10-09 21:06:31.724645; user: viv_3000; message Списочек коммандочек; error: None
 2023-10-09 21:06:42.922648; user: viv_3000; message : \getCallTimetableSaturday; error: None
+2023-10-09 21:06:42.922648; user: viv_3000; message : \getCallTimetableSaturday; error: None
