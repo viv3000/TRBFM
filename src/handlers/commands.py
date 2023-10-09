@@ -20,7 +20,7 @@ class TimetableBtn():
 def commands_handler(bot):
     @bot.message_handler(commands = ['start'])
     def startHandler(message):
-        Log().log(message.from_user.username + ': \start');
+        Log().log(': \start', message.from_user);
         markup = types.ReplyKeyboardMarkup();
     
         btns = {
@@ -34,7 +34,7 @@ def commands_handler(bot):
 
     @bot.message_handler(commands = ['getTimetable'])
     def getTimetableHandler(message):
-        Log().log(message.from_user.username + ': \getTimetable');
+        Log().log(': \getTimetable', message.from_user);
         markup = types.InlineKeyboardMarkup();
     
         btns = []
@@ -52,21 +52,21 @@ def commands_handler(bot):
 
     @bot.message_handler(commands = ['getCallTimetable'])
     def getCallTimetableHandler(message):
-        Log().log(message.from_user.username + ': \getCallTimetable');
+        Log().log(': \getCallTimetable', message.from_user);
         bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-основное-.pdf");
     
     @bot.message_handler(commands = ['getCallTimetableMonday'])
     def getCallTimetableMondayHandler(message):
-        Log().log(message.from_user.username + ': \getCallTimetableMonday');
+        Log().log(': \getCallTimetableMonday', message.from_user);
         bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-на-понедельник-.pdf");
     
     @bot.message_handler(commands = ['getCallTimetableFriday'])
     def getCallTimetableFridayHandler(message):
-        Log().log(message.from_user.username + ': \getCallTimetableFriday');
+        Log().log(': \getCallTimetableFriday', message.from_user);
         bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-на-пятницу-.pdf");
     
     @bot.message_handler(commands = ['getCallTimetableSaturday'])
     def getCallTimetableSaturdayHandler(message):
-        Log().log(message.from_user.username + ': \getCallTimetableSaturday');
+        Log().log(': \getCallTimetableSaturday', message.from_user);
         bot.send_document(message.from_user.id, "https://mkeiit.ru/wp-content/uploads/2023/09/Расписание-звонков-суббота.pdf");
 
