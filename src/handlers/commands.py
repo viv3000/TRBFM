@@ -5,18 +5,10 @@ from datetime import datetime, timedelta, date;
 from templates.btn import btn;
 from templates.Timetables import Timetables;
 from templates.Timetables import Timetable;
+from templates.TimetableBtn import TimetableBtn
 
 from log import Log;
-
-class TimetableBtn():
-    def __init__(self, timetable: Timetable):
-        self.timetable = timetable
-        self.weekdays = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
-
-    def to_button(self) -> telebot.types.InlineKeyboardButton:
-        message = f'{self.weekdays[self.timetable.weekday]}\n({self.timetable.date})'
-        return types.InlineKeyboardButton(text=message, callback_data=self.timetable.href)
-    
+   
 def commands_handler(bot):
     @bot.message_handler(commands = ['start'])
     def startHandler(message):
