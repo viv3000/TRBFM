@@ -496,3 +496,5 @@ restart server!!!!
 2023-10-09 20:51:53.064824; user: viv_3000; message server: call.data:https://mkeiit.ru/wp-content/uploads/2023/10/9.10.2023.pdf; error: None
 2023-10-09 21:01:36.840086; user: Misha_Kast; message : \start; error: None
 2023-10-09 21:02:06.447953; user: viv_3000; message Списочек коммандочек; error: None
+2023-10-09 21:06:31.724645; user: viv_3000; message Списочек коммандочек; error: None
+2023-10-09 21:06:42.922648; user: viv_3000; message : \getCallTimetableSaturday; error: None
